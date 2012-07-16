@@ -51,7 +51,14 @@
             else {
                 // bind functionality to buttons                
                 $("#btnRotateIt").click(function() {
+                    $("#btnRotateIt").attr("disabled", "true");
                     $("#imgHTML5Logo").toggleClass("rotated-90deg");
+                });
+                
+                // bind function to end event
+                $("#imgHTML5Logo").bind("webkitTransitionEnd", function(event) {
+                    $("#btnRotateIt").removeAttr('disabled');
+
                 });
             }
         });
