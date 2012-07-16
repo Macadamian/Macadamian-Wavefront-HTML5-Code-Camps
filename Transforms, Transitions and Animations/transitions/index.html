@@ -22,8 +22,8 @@
     	   -webkit-transform: rotate(90deg)
 	   }
 	   
-	   .scaled-one-fifth {
-    	   -webkit-transform: scale(0.2)
+	   #imgHTML5Logo {
+    	   -webkit-transition: -webkit-transform 2s
 	   }
 	</style>
 
@@ -33,7 +33,6 @@
     <header>
     </header>
     <div role="main">
-        <button id="btnMakeItSmall">Make It Small</button>
         <button id="btnRotateIt">Rotate It</button>
         <img id="imgHTML5Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
     </div>
@@ -50,11 +49,7 @@
                 $("[role=main]").html("This browser does not support CSS transforms which are required for this demo.");
             }
             else {
-                // bind functionality to buttons
-                $("#btnMakeItSmall").click(function() {
-                    $("#imgHTML5Logo").toggleClass("scaled-one-fifth");
-                });
-                
+                // bind functionality to buttons                
                 $("#btnRotateIt").click(function() {
                     $("#imgHTML5Logo").toggleClass("rotated-90deg");
                 });
