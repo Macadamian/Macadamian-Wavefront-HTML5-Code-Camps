@@ -46,8 +46,8 @@
 
         $(document).ready(function() {
             // 2D transforms
-            if (!Modernizr.csstransforms) {
-                $("[role=main]").html("This browser does not support CSS transforms which are required for this demo.");
+            if (!Modernizr.csstransitions) {
+                $("[role=main]").html("This browser does not support CSS transitions which are required for this demo.");
             }
             else {
                 // bind functionality to buttons

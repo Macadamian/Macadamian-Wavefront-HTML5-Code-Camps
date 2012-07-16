@@ -36,7 +36,7 @@
     <header>
     </header>
     <div role="main">
-        <button id="btnRotateIt">Blink With Style</button>
+        <button id="btnBlink">Blink With Style</button>
         <img id="imgHTML5Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
     </div>
     <footer>
@@ -48,12 +48,12 @@
 
         $(document).ready(function() {
             // 2D transforms
-            if (!Modernizr.csstransforms) {
-                $("[role=main]").html("This browser does not support CSS transforms which are required for this demo.");
+            if (!Modernizr.cssanimations) {
+                $("[role=main]").html("This browser does not support CSS animations which are required for this demo.");
             }
             else {
                 // bind functionality to buttons                
-                $("#btnRotateIt").click(function() {
+                $("#btnBlink").click(function() {
                     $("#imgHTML5Logo").toggleClass("blink-with-style");
                 });
             }
