@@ -28,8 +28,46 @@
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="js/app.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+<script>
+window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
+
+$(document).ready(function() {
+    // 2D transforms
+    if (!Modernizr.csstransforms) {
+        document.writeln('css transforms not supported :(');
+    }
+    else {
+        document.writeln('css transforms supported :)');
+    }
+    document.writeln("<br>");
+    
+    // 3D transforms
+    if (!Modernizr.csstransforms3d) {
+        document.writeln('css 3d transitions not supported :(');
+    }
+    else {
+        document.writeln('css 3d transitions supported :)');
+    }
+    document.writeln("<br>");
+
+    // transitions
+    if (!Modernizr.csstransitions) {
+        document.writeln('css transitions not supported :(');
+    }
+    else {
+        document.writeln('css transitions supported :)');
+    }
+    document.writeln("<br>");
+
+    // animations
+    if (!Modernizr.cssanimations) {
+        document.writeln('css animations not supported :(');
+    }
+    else {
+        document.writeln('css animations supported :)');
+    }
+});
+</script>
 
 </body>
 </html>
