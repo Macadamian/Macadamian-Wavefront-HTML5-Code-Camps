@@ -13,29 +13,14 @@
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="css/style.css">
-	<style type="text/css">
-	   [role=main] {
-    	   margin: 10px 10px
-	   }
-	   
-	   @-webkit-keyframes blink-with-style-frames
-	   {
-	       0%   {opacity: 1;}
-	       50%  {opacity: 0;}
-	       100% {opacity: 1;}
-	   }
-	   
-	   .blink-with-style {
-    	   -webkit-animation: blink-with-style-frames 3s infinite;
-	   }
-	</style>
+	<link rel="stylesheet" href="css/app.css">
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body>
     <header>
     </header>
-    <div role="main">
+    <div role="main" style="margin: 10px 10px">
         <button id="btnBlink">Blink With Style</button>
         <img id="imgHTML5Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"/>
     </div>
@@ -43,21 +28,7 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
-
-        $(document).ready(function() {
-            // 2D transforms
-            if (!Modernizr.cssanimations) {
-                $("[role=main]").html("This browser does not support CSS animations which are required for this demo.");
-            }
-            else {
-                // bind functionality to buttons                
-                $("#btnBlink").click(function() {
-                    $("#imgHTML5Logo").toggleClass("blink-with-style");
-                });
-            }
-        });
-    </script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/app.js"></script>
 </body>
 </html>
