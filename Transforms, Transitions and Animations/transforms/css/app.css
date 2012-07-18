@@ -15,11 +15,16 @@
  */
 
 .rotated-90deg {
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
 }
 
 .scaled-one-fifth {
-   -webkit-transform: scale(0.2);
-   -moz-transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+}
+
+.translated-10percent {
+    -webkit-transform: translate(10%, 10%);
+    -moz-transform: translate(10%, 10%);
 }

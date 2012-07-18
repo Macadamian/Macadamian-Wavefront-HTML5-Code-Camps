@@ -28,5 +28,9 @@ $(document).ready(function() {
         $("#btnRotateIt").click(function() {
             $("#imgHTML5Logo").toggleClass("rotated-90deg");
         });
+        
+        $("#btnTranslate").click(function() {
+            $("#imgHTML5Logo").toggleClass("translated-10percent");
+        });
     }
 });
