@@ -118,8 +118,8 @@
     background-color: black;
     -webkit-animation: seconds-frames 6s infinite linear;
     -moz-animation: seconds-frames 6s infinite linear;
-    -webkit-transform-origin: 0px 100%;
-    -moz-transform-origin: 0px 100%;
+    -webkit-transform-origin: 1px 100%;
+    -moz-transform-origin: 1px 100%;
 }
 
 
@@ -146,8 +146,8 @@
     background-color: black;
     -webkit-animation: minutes-frames 360s infinite linear;
     -moz-animation: minutes-frames 360s infinite linear;
-    -webkit-transform-origin: 0px 100%;
-    -moz-transform-origin: 0px 100%;
+    -webkit-transform-origin: 3px 100%;
+    -moz-transform-origin: 3px 100%;
 }
 
 
@@ -174,6 +174,6 @@
     background-color: black;
     -webkit-animation: hours-frames 4320s infinite linear;
     -moz-animation: hours-frames 4320s infinite linear;
-    -webkit-transform-origin: 0px 100%;
-    -moz-transform-origin: 0px 100%;
+    -webkit-transform-origin: 5px 100%;
+    -moz-transform-origin: 5px 100%;
 }
