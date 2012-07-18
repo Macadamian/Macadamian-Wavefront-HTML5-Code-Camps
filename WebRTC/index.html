@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WaveRoulette</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+    
+  </head>
+
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
+
+
+
+    <div class="container">
+
+
+<!-- Masthead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <h1>WaveRoulette</h1>
+  <p class="lead">A ChatRoulette clone using WebRTC.</p>
+</header>
+
+
+
+
+<!-- Main
+================================================== -->
+<section id="Main">
+
+  <div class="row">
+
+    <div class="span6">
+      <div class="page-header">
+        <h1>Our video</h1>
+      </div>
+
+      <div>
+        <video id="our-video" autoplay></video>
+      </div>
+    </div>
+
+    <div class="span6">
+      <div class="page-header">
+        <h1>Their video</h1>
+      </div>
+
+      <div>
+        <video id="their-video" autoplay></video>
+      </div>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<br><br><br><br>
+
+    </div><!-- /container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/application.js"></script>
+
+  </body>
+</html>
