@@ -83,7 +83,8 @@ var sendAnswerToOffer = function(offer) {
 //
 
 socket.on('start', function() {
-	sendOffer();
+	// The server just matched us up with someone and has told us to start a call.
+	// TODO: How do we start the call?
 });
 
 socket.on('offer', function(sdp) {
@@ -91,8 +92,9 @@ socket.on('offer', function(sdp) {
 	console.log(sdp);
 
 	var offer = new SessionDescription(sdp);
-	acceptOffer(offer);
-	sendAnswerToOffer(offer);
+
+	// We just received an offer from the server. 
+	// TODO: What should we do with this offer?
 });
 
 socket.on('answer', function(sdp) {
@@ -100,7 +102,9 @@ socket.on('answer', function(sdp) {
 	console.log(sdp);
 
 	var answer = new SessionDescription(sdp);
-	acceptAnswer(answer);
+
+	// We just received an answer to our offer from the server. 
+	// TODO: How should we start the call?
 });
 
 socket.on('candidate', function(label, candidateData) {
@@ -111,7 +115,9 @@ socket.on('candidate', function(label, candidateData) {
 	// through any firewalls or NATs in the way. The details aren't important
 	// here.
 	var candidate = new IceCandidate(label, candidateData);
-	acceptCandidate(candidate);
+
+	// We just received an candidate... 
+	// TODO: What do we do with it?
 });
 
 
