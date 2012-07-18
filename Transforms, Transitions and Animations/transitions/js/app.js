@@ -22,16 +22,26 @@ $(document).ready(function() {
     else {
         // bind functionality to buttons                
         $("#btnRotateIt").click(function() {
-            $("#btnRotateIt").attr("disabled", "true");
+            $("button").attr("disabled", "true");
             $("#imgHTML5Logo").toggleClass("rotated-90deg");
         });
         
+        $("#btnMakeItSmall").click(function() {
+            $("button").attr("disabled", "true");
+            $("#imgHTML5Logo").toggleClass("scaled-one-fifth");
+        });
+        
+        $("#btnTranslate").click(function() {
+            $("button").attr("disabled", "true");
+            $("#imgHTML5Logo").toggleClass("translated-10percent");
+        });
+
         // bind function to end event for webkit and mozilla
-        function onAnimationEnd(event) {
-            $("#btnRotateIt").removeAttr('disabled');
+        function onTransitionEnd(event) {
+            $("button").removeAttr('disabled');
         }
-        $("#imgHTML5Logo").bind("webkitTransitionEnd", onAnimationEnd);
-        $("#imgHTML5Logo").bind("transitionend", onAnimationEnd);
+        $("#imgHTML5Logo").bind("webkitTransitionEnd", onTransitionEnd);
+        $("#imgHTML5Logo").bind("transitionend", onTransitionEnd);
 
     }
 });

@@ -19,6 +19,16 @@
    -moz-transform: rotate(360deg);
 }
 
+.scaled-one-fifth {
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+}
+
+.translated-10percent {
+    -webkit-transform: translate(10%, 10%);
+    -moz-transform: translate(10%, 10%);
+}
+
 #imgHTML5Logo {
    -webkit-transition: -webkit-transform 1s;
    -moz-transition: -moz-transform 1s;
