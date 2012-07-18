@@ -13,62 +13,7 @@
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="css/style.css">
-	<style type="text/css">
-	   body {
-    	   overflow: hidden
-	   }
-	   
-	   #btnToggle {
-	       position: absolute;
-	       left: 20px;
-	       top: 20px;   
-	   }
-	   
-	   .full-size-child {
-    	   position: absolute;
-    	   width: 100%;
-    	   height: 100%;
-	   }
-	   
-	   #divPanel {
-    	   position: absolute;
-    	   width: 100%;
-    	   height: 20%;
-    	   background-color: rgb(64, 64, 64);
-    	   border-width: 2px;
-    	   border-color: rgb(32, 32, 32);
-    	   -webkit-transition: bottom 1s;
-    	   color: rgb(224, 244, 244);
-       }
-	   
-	   #divPanel.uncollapsed {
-    	   bottom: -10%
-	   }
-	   
-	   #divPanel.collapsed {
-    	   bottom: 0%
-	   }
-	   
-	   [role=panelContentWhenCollapsed], [role=panelContentWhenUncollapsed] {
-    	   -webkit-transition: opacity 1s
-       }
-	   
-	   #divPanel.collapsed [role=panelContentWhenCollapsed] {
-    	   opacity: 1
-	   }
-	   
-	   #divPanel.collapsed [role=panelContentWhenUncollapsed] {
-    	   opacity: 0
-	   }
-	   
-	   #divPanel.uncollapsed [role=panelContentWhenCollapsed] {
-    	   opacity: 0
-	   }
-	   
-	   #divPanel.uncollapsed [role=panelContentWhenUncollapsed] {
-    	   opacity: 1
-	   }
-	</style>
+	<link rel="stylesheet" href="css/app.css">
 
 	<script src="js/libs/modernizr-2.5.3.min.js"></script>
 </head>
@@ -90,22 +35,7 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
-
-        $(document).ready(function() {
-            // 2D transforms
-            if (!Modernizr.csstransitions) {
-                $("[role=main]").html("This browser does not support CSS transitions which are required for this demo.");
-            }
-            else {
-                // bind functionality to buttons                
-                $("#btnToggle").click(function() {
-                    $("#divPanel").toggleClass("collapsed");
-                    $("#divPanel").toggleClass("uncollapsed");
-                });
-            }
-        });
-    </script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/app.js"></script>
 </body>
 </html>

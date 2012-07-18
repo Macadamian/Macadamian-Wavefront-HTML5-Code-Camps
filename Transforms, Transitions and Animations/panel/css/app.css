@@ -1,0 +1,72 @@
+/*
+ * Copyright (c) 2012 Macadamian Technologies Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+   overflow: hidden
+}
+
+#btnToggle {
+   position: absolute;
+   left: 20px;
+   top: 20px;   
+}
+
+.full-size-child {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+#divPanel {
+   position: absolute;
+   width: 100%;
+   height: 20%;
+   background-color: rgb(64, 64, 64);
+   border-width: 2px;
+   border-color: rgb(32, 32, 32);
+   -webkit-transition: bottom 1s;
+   -moz-transition: bottom 1s;
+   color: rgb(224, 244, 244);
+}
+
+#divPanel.uncollapsed {
+   bottom: -10%
+}
+
+#divPanel.collapsed {
+   bottom: 0%
+}
+
+[role=panelContentWhenCollapsed], [role=panelContentWhenUncollapsed] {
+   -webkit-transition: opacity 1s;
+   -moz-transition: opacity 1s;
+}
+
+#divPanel.collapsed [role=panelContentWhenCollapsed] {
+   opacity: 1
+}
+
+#divPanel.collapsed [role=panelContentWhenUncollapsed] {
+   opacity: 0
+}
+
+#divPanel.uncollapsed [role=panelContentWhenCollapsed] {
+   opacity: 0
+}
+
+#divPanel.uncollapsed [role=panelContentWhenUncollapsed] {
+   opacity: 1
+}
